@@ -3,7 +3,7 @@
 <head>
     <title>K线图</title>
     <meta charset="utf-8">
-    <link href="/src/css/main.css" rel="stylesheet"/>
+    <link href="../src/css/main.css" rel="stylesheet"/>
     <script src="../lib/require.js"></script>
     <style type="text/css">
         .kline {
@@ -46,7 +46,7 @@
     });
 
     require(['kline'], function () {
-        var kline = new kline({
+        var kline = new Kline({
             element: "#kline_container",
             width: 1200,
             height: 650,
@@ -56,7 +56,7 @@
             symbol: "btc",
             symbolname: "btc/usd",
             type: "poll", // poll/socket
-            url: "/examples/mock.json",
+            url: "../examples/mock.json",
             limit: 1000,
             intervaltime: 5000,
             debug: true,
